@@ -3,43 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Event KeyCodes</title>
-
+    <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-      table,
-      th,
-      td {
-        border: 1px solid #e7e7e7;
-      }
-      .project {
-        background-color: #1c1c1c;
-        color: #ffffff;
+      .cont {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        margin: 16%;
+      }
+      h2{
         text-align: center;
-        height: 100vh;
+        color: rgb(239, 61, 239);
+      }
+      body{
+        background-color: #212121;
+        color: white;
       }
 
-      .color {
-        color: aliceblue;
-        display: flex;
-        flex-direction: row;
-      }
     </style>
   </head>
   <body>
-    <div class="project">
-      <div id="insert">
-        <div class="key">Press the key and watch magic</div>
+    <h2 >
+      Hey guys it's a very simple game between you and me ( obviosly I am a
+      machine). I have a number in my mind, You have to Guess a number between 1 to
+      100, if it matches with mine, you win, simple.
+    </h2>
+    <div class="cont">
+      <form id="form" name="form" class="form">
+        <label style="color: #ed9ced;" for="guessField">Guess a number</label>
+        <input type="text" id="guessField" class="guessField" />
+        <button class="button">submit guess</button>
+        <!-- <input type="submit" value="submit guess"> -->
+      </form>
+      <div style="margin: 2%" class="info">
+        <div style="color: #ba4cf5" class="previousGuess">previous guess:</div>
+        <div style="color:#ba4cf5">
+          Number of guess remaining: <span style="color: orange;" class="numberOfGuessR">10</span>
+        </div>
       </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
